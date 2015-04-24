@@ -1,0 +1,41 @@
+<head>
+	<title>SWHK8 Voting</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	{{> homepage}}
+</body>
+
+<template name="homepage">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<img src="/header1.png" class="header-image">
+			</div>
+		</div>
+		<div class="row top">
+			<div class="col-md-12">
+				<h2>Cast a vote.</h2>
+				{{#each teams}}
+				{{> team}}
+				{{/each}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Thanks for voting.</h2>
+				<a href="http://www.iamryanlee.com">A Ryan Lee Production</a> | For <a href="http://www.startupweekend.hk">SWHK</a>
+
+			</div>
+		</div>
+	</div>
+	
+</template>
+
+<template name="team">
+	<button class="btn btn-default">{{name}}</button>
+	Votes: {{votes}}
+	<br><br>
+</template>
